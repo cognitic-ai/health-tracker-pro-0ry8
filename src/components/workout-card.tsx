@@ -1,6 +1,6 @@
 import * as AC from "@bacons/apple-colors";
 import { View, Text, Pressable } from "react-native";
-import { SymbolView } from "expo-symbols";
+import Icon from "./icon";
 
 interface WorkoutCardProps {
   icon: string;
@@ -44,7 +44,7 @@ export default function WorkoutCard({
             alignItems: "center",
           }}
         >
-          <SymbolView name={icon} size={24} tintColor={iconColor} />
+          <Icon name={icon} size={24} color={iconColor} />
         </View>
         <View style={{ flex: 1 }}>
           <Text style={{ fontSize: 16, fontWeight: "600", color: AC.label }}>

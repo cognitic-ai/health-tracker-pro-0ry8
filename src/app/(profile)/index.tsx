@@ -1,6 +1,6 @@
 import * as AC from "@bacons/apple-colors";
 import { ScrollView, View, Text, Pressable } from "react-native";
-import { SymbolView } from "expo-symbols";
+import Icon from "@/components/icon";
 
 const userProfile = {
   name: "Alex Johnson",
@@ -291,15 +291,15 @@ export default function ProfileScreen() {
                     alignItems: "center",
                   }}
                 >
-                  <SymbolView name={item.icon} size={16} tintColor={item.color} />
+                  <Icon name={item.icon} size={16} color={item.color} />
                 </View>
                 <Text style={{ flex: 1, fontSize: 16, color: AC.label }}>
                   {item.label}
                 </Text>
-                <SymbolView
+                <Icon
                   name="chevron.right"
                   size={14}
-                  tintColor={AC.tertiaryLabel as string}
+                  color={AC.tertiaryLabel as string}
                 />
               </Pressable>
             ))}

@@ -1,6 +1,6 @@
 import * as AC from "@bacons/apple-colors";
 import { ScrollView, View, Text, Pressable } from "react-native";
-import { SymbolView } from "expo-symbols";
+import Icon from "@/components/icon";
 import MealCard from "@/components/meal-card";
 import ActivityRing from "@/components/activity-ring";
 
@@ -201,11 +201,7 @@ export default function NutritionScreen() {
           }}
         >
           <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-            <SymbolView
-              name="drop.fill"
-              size={20}
-              tintColor={AC.systemBlue as string}
-            />
+            <Icon name="drop.fill" size={20} color={AC.systemBlue as string} />
             <Text style={{ fontSize: 16, fontWeight: "600", color: AC.label }}>
               Water Intake
             </Text>
@@ -232,10 +228,10 @@ export default function NutritionScreen() {
                 alignItems: "center",
               }}
             >
-              <SymbolView
+              <Icon
                 name="drop.fill"
                 size={16}
-                tintColor={
+                color={
                   i < todayNutrition.water.consumed
                     ? "white"
                     : (AC.systemGray3 as string)

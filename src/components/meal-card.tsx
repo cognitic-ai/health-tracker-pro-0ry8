@@ -1,6 +1,6 @@
 import * as AC from "@bacons/apple-colors";
 import { View, Text, Pressable } from "react-native";
-import { SymbolView } from "expo-symbols";
+import Icon from "./icon";
 
 interface MealCardProps {
   mealType: string;
@@ -49,7 +49,7 @@ export default function MealCard({
             alignItems: "center",
           }}
         >
-          <SymbolView name={icon} size={22} tintColor={color} />
+          <Icon name={icon} size={22} color={color} />
         </View>
         <View style={{ flex: 1 }}>
           <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>

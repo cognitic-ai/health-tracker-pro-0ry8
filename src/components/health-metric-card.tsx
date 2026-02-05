@@ -1,6 +1,6 @@
 import * as AC from "@bacons/apple-colors";
 import { View, Text, Pressable } from "react-native";
-import { SymbolView } from "expo-symbols";
+import Icon from "./icon";
 
 interface HealthMetricCardProps {
   icon: string;
@@ -35,11 +35,7 @@ export default function HealthMetricCard({
       })}
     >
       <View style={{ flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 12 }}>
-        <SymbolView
-          name={icon}
-          size={22}
-          tintColor={iconColor}
-        />
+        <Icon name={icon} size={22} color={iconColor} />
         <Text style={{ fontSize: 14, fontWeight: "600", color: iconColor }}>
           {title}
         </Text>

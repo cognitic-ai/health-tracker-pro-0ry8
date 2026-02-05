@@ -1,15 +1,15 @@
 import * as AC from "@bacons/apple-colors";
 import { ScrollView, View, Text, Pressable } from "react-native";
-import { SymbolView } from "expo-symbols";
+import Icon from "@/components/icon";
 import WorkoutCard from "@/components/workout-card";
 
 const workoutTypes = [
   { id: "1", icon: "figure.run", name: "Running", color: AC.systemGreen as string },
   { id: "2", icon: "figure.walk", name: "Walking", color: AC.systemBlue as string },
-  { id: "3", icon: "figure.strengthtraining.traditional", name: "Strength", color: AC.systemOrange as string },
-  { id: "4", icon: "figure.yoga", name: "Yoga", color: AC.systemPurple as string },
+  { id: "3", icon: "dumbbell.fill", name: "Strength", color: AC.systemOrange as string },
+  { id: "4", icon: "figure.mind.and.body", name: "Yoga", color: AC.systemPurple as string },
   { id: "5", icon: "figure.pool.swim", name: "Swimming", color: AC.systemCyan as string },
-  { id: "6", icon: "figure.outdoor.cycle", name: "Cycling", color: AC.systemRed as string },
+  { id: "6", icon: "bicycle", name: "Cycling", color: AC.systemRed as string },
 ];
 
 const recentWorkouts = [
@@ -24,7 +24,7 @@ const recentWorkouts = [
   },
   {
     id: "2",
-    icon: "figure.strengthtraining.traditional",
+    icon: "dumbbell.fill",
     iconColor: AC.systemOrange as string,
     name: "Upper Body Workout",
     duration: "45 min",
@@ -33,7 +33,7 @@ const recentWorkouts = [
   },
   {
     id: "3",
-    icon: "figure.yoga",
+    icon: "figure.mind.and.body",
     iconColor: AC.systemPurple as string,
     name: "Morning Yoga",
     duration: "30 min",
@@ -42,7 +42,7 @@ const recentWorkouts = [
   },
   {
     id: "4",
-    icon: "figure.outdoor.cycle",
+    icon: "bicycle",
     iconColor: AC.systemRed as string,
     name: "Evening Ride",
     duration: "55 min",
@@ -110,7 +110,7 @@ export default function ActivityScreen() {
                   alignItems: "center",
                 }}
               >
-                <SymbolView name={workout.icon} size={24} tintColor={workout.color} />
+                <Icon name={workout.icon} size={24} color={workout.color} />
               </View>
               <Text
                 style={{
